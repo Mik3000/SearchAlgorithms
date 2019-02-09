@@ -70,7 +70,7 @@ Mikko Venhuis
 
 Email: mikkovenhuis@gmail.com
 
-Linkedin: [link] (www.linkedin.com/in/mikkovenhuis)
+Linkedin: www.linkedin.com/in/mikkovenhuis
 
 ### Things I did not have time for but are on my to-do list
 * Generate the optimal solution to this problem using Gurobi
