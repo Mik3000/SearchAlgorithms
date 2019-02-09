@@ -78,11 +78,6 @@ Linkedin: www.linkedin.com/in/mikkovenhuis
 * Apply alternative search heuristics like Genetic Algoritm, Simulated Annealing or Tabu Search
 
 ### If you would like to know more:
-* Traveling Sales Problem: [Wiki] (https://en.wikipedia.org/wiki/Travelling_salesman_problem) [University of Waterloo] (http://www.math.uwaterloo.ca/tsp/)
-* 2-Opt [Wiki] (https://en.wikipedia.org/wiki/2-opt)
-* Nearest Neighbour [Wiki] (https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
-
-
-
-
-
+* Traveling Sales Problem: [wiki](https://en.wikipedia.org/wiki/Travelling_salesman_problem) ([University of Waterloo](http://www.math.uwaterloo.ca/tsp/)
+* 2-Opt [wiki](https://en.wikipedia.org/wiki/2-opt)
+* Nearest Neighbour [wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
