@@ -47,6 +47,18 @@ Yes!!! 2-Opt took this ugly thing we started out with and has turned it into a b
 This algoritm runs the RNN algoritm many times and applies 2-Opt to each outcome. By repeating this process over and over we are exploring the neigbourhood of many different starting solutions. Doing this we greatly expand out searching area and we have a bigger chance of finding local and global optima. In this implementation I am repeating the process 100 times. 
 ![](RandNN2OptRep100nCities85.gif)
 
+Wow! Applying this combination of algoritms as decreased total distance traveled by a whopping 10%! Total travel distance is not 90.414 KM. Now its really time to celebrate. This algoritm has been able to find 7 improvements in our previous best route. By introducing variance in the explored intial solutions we where able to explore a lot of different solutions and improve on them iteratively. Doing this we where able to cover a lot of ground, and also explore initial solutions that looked less promising at start. The algoritm went from something very static, without inspiration and creativity to something that is able to learn and improve by itself and show creativity in the process. 
+
+## Conclusion
+Optimization problems can appear to be simple, but in fact are often very complex and have a enormous amount of potential solutions. Solving them can be done with exact methods, but those often require time and a lot of computing power. Especially large optimization problems will often be too difficult to deal with, despite all the process we are making in terms of affordable computing power (i.e. Moore' s law). But, applying common sense and some creativity, we can still build algoritms that can perform very well. In fact, these solutions can even outperform the exact methods if time is a constraint. I hope this paper helps people unfamiliar with optimization create some intuition in how algoritms can work and get a sense of their massive potential. 
+
+### Things I did not have time for but are on my to-do list
+- Generate the optimal solution to this problem using the Gurobi
+- Make regional versions. E.g. visit all capital cities in Europe
+- Apply alternate search heuristics, like Genetic Algoritm, Simulated Annealing or Tabu Search
+
+### If you would like to know more:
+- Traveling Sales Problem https://en.wikipedia.org/wiki/Travelling_salesman_problem
 
 
 
