@@ -67,7 +67,7 @@ Let me know if you where able to find an even better solution!
 
 Mikko Venhuis
 Email: mikkovenhuis@gmail.com
-Linkedin: link
+Linkedin: [link] (www.linkedin.com/in/mikkovenhuis)
 
 ### Things I did not have time for but are on my to-do list
 *Generate the optimal solution to this problem using the Gurobi
@@ -75,11 +75,9 @@ Linkedin: link
 *Apply alternative search heuristics like Genetic Algoritm, Simulated Annealing or Tabu Search
 
 ### If you would like to know more:
-- Traveling Sales Problem: [Wiki] (https://en.wikipedia.org/wiki/Travelling_salesman_problem) [University of Waterloo] (http://www.math.uwaterloo.ca/tsp/)
-- 2-Opt [Wiki] (https://en.wikipedia.org/wiki/2-opt)
-- 
-
-([source](http://www.math.uwaterloo.ca/tsp/problem/index.html))
+*Traveling Sales Problem: [Wiki] (https://en.wikipedia.org/wiki/Travelling_salesman_problem) [University of Waterloo] (http://www.math.uwaterloo.ca/tsp/)
+*2-Opt [Wiki] (https://en.wikipedia.org/wiki/2-opt)
+*Nearest Neighbour [Wiki] (https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
 
 
 
