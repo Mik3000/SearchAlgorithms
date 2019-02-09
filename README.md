@@ -16,8 +16,25 @@ Another approach could be to use exact algoritms like branch-and-bound or simple
 
 Instead, I will use another powerfull line of attack to this problem: search heuristics. The advantage of these methods is that you can keep them relatively simpel and intuitive, while they are still able to find solutions that are (close to) the optimum. Also, they scale better so applying them to a 500 city TSP will less likely crash your machine. A disadvantage is that you will not know how far you are from the optimimum. The search heursistics I used include Nearest Neighbours, Randomized Nearest Neighbours and (repeated) 2-Opt. As I will show you, these are relatively simple but also very effective and intuitive, especially when applied in combination. 
 
-## Nearest Neighbours
-This is one of the simplest search heuristics out there. It is part of the family of constructive search heuristics, meaning that it gradually builds a route, starting with 1 city and stopping only when all cities have been visited. It is greedy in nature; at each step it chooses the location that is closest to the current location.
+## Nearest Neighbour
+This is one of the simplest search heuristics out there. It is part of the family of constructive search heuristics, meaning that it gradually builds a route, starting with 1 city and stopping only when all cities have been visited. It is greedy in nature; at each step it chooses the location that is closest to the current location. Applied to our problem it finds a route with a total distance of 112.881 KM. Everytime we run the algoritm, it will generate exactly the same solution. This might seem reassuring, but it is also a big downside of this algoritm. Because of its greedy nature, it will always go for immediate gains and miss out on opportunities that will pay out in a longer term. 
 ![](NNRep1nCities85.gif)
+Nearest Neighbour has given us a feasible solution that does not look bad at all for a first try. But can we improve further on it?
+## Nearest Neighbors with 2-Opt
+2-Opt is an algoritm from the local search family. These algoritms generate a final solution by starting at an initial and  solution and iteratively looking for improvement opportunities in the neighourhood of that solution. This initial solution can be any type of solution as long as it is a feasible one. For example the outcome of a constructive algoritm or a solution build from expert knowledge. The implementation of this 2-opt algoritm works as follows: take 2 arches from the route and reconnect these arches with each other. If this modification has led to a shorter total travel time, the route is modified. During one run of the algoritm, alle possible arches are selected and exchanged. This process can be repeated until no more improvements are found. 
+
+For example, let us take a single route were we travel using the following route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam. One arch could be Brussel-Paris, another could be Copenhagen-Helsinki. What if we exchange the connections in these arches, i.e. travel from Brussel-Copenhagen and from Paris-Helsinki. The new route fould then looks as follows: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam.
+
+2-Opt calculates the change in total distance for both routes and accepts the changes if distance is decreased. It does it for all possible combination or arches and repeats that process until no more improvements are found or untill a pre-specified number of iterations are completed(100x in this implementation). 
+
+Old route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam
+New route: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam
+
+Below GIF shows the intuition of this algoritm. The visualisation shows just 1 iteration, but there could be up to 700000 of these iterations in the current set-up. Hence, the final solution could look drastically different from the initial solution. 
+
+
+## Randomized Nearest Neighbours
+One way to 
+
 
 
