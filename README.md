@@ -31,7 +31,7 @@ Old route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - Londo
 New route: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam
 
 Below GIF shows the intuition of this algoritm. The visualisation shows just 1 iteration, but there could be up to 700000 of these iterations in the current set-up. Hence, the final solution could look drastically different from the initial solution. 
-
+![](NN2OptRep1nCities85.gif)
 
 ## Randomized Nearest Neighbours
 One way to 
