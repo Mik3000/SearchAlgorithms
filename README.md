@@ -56,13 +56,6 @@ Wow! Applying this combination of algoritms has decreased our current best total
 ## Conclusion
 Optimization problems can appear to be simple, but in fact are often very complex and have a enormous amount of potential solutions. Solving them can be done with exact methods, but those often require time and a lot of computing power. Especially large optimization problems will often be too difficult to deal with, despite all the process we are making in terms of affordable computing power (i.e. Moore' s law). But, applying common sense and some creativity, we can build algoritms that can perform very well. In fact, these solutions can even outperform the exact methods if time is a constraint. I hope this paper helps people unfamiliar with optimization create some intuition in how algoritms can work and get a sense of their massive potential. 
 
-Results:
-* Nearest Neighbour: 112.881 KM
-* Nearest Neighbours with 2-Opt: 99.242 KM
-* Randomized Nearest Neighbours: 194.936 KM
-* Randomized Nearest Neighbours with 2-Opt: 99.430 KM
-* Repeated Randomized Nearest Neighbours with 2-Opt: 90.414 KM
-
 Algoritm | Solution
 ------------ | -------------
 Nearest Neighbour | 112.881 KM
