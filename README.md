@@ -17,9 +17,9 @@ Another approach could be to use exact algoritms like branch-and-bound or simple
 Instead, I will use another powerfull line of attack to this problem: search heuristics. The advantage of these methods is that you can keep them relatively simpel and intuitive, while they are still able to find solutions that are (close to) the optimum. Also, they scale better so applying them to a 500 city TSP will less likely crash your machine. A disadvantage is that you will not know how far you are from the optimimum. The search heursistics I used include Nearest Neighbours, Randomized Nearest Neighbours and (repeated) 2-Opt. As I will show you, these are relatively simple but also very effective and intuitive, especially when applied in combination. 
 
 ## Nearest Neighbour
-This is one of the simplest search heuristics out there. It is part of the family of constructive search heuristics, meaning that it gradually builds a route, starting with 1 city and stopping only when all cities have been visited. It is greedy in nature; at each step it chooses the location that is closest to the current location. Applied to our problem it finds a route with a total distance of 112.881 KM. Everytime we run the algoritm, it will generate exactly the same solution. This might seem reassuring, but it is also a big downside of this algoritm. Because of its greedy nature, it will always go for immediate gains and miss out on opportunities that will pay out in a longer term. 
+Nearest Neighour (NN) is one of the simplest search heuristics out there. It is part of the family of constructive search heuristics, meaning that it gradually builds a route, starting with 1 city and stopping only when all cities have been visited. It is greedy in nature; at each step it chooses the location that is closest to the current location. Applied to our problem it finds a route with a total distance of 112.881 KM. Everytime we run the algoritm, it will generate exactly the same solution. This might seem reassuring, but it is also a big downside of this algoritm. Because of its greedy nature, it will always go for immediate gains and miss out on opportunities that will pay out in a longer term. 
 ![](NNRep1nCities85.gif)
-Nearest Neighbour has given us a feasible solution that does not look bad at all for a first try. But can we improve further on it?
+NN has given us a feasible solution that does not look bad at all for a first try. But can we improve further on it?
 ## Nearest Neighbors with 2-Opt
 2-Opt is an algoritm from the local search family. These algoritms generate a final solution by starting at an initial and  solution and iteratively looking for improvement opportunities in the neighourhood of that solution. This initial solution can be any type of solution as long as it is a feasible one. For example the outcome of a constructive algoritm or a solution build from expert knowledge. The implementation of this 2-opt algoritm works as follows: take 2 arcs from the route and reconnect these arcs with each other. If this modification has led to a shorter total travel time, the route is modified. The algoritm continues to build on the improved route. This process can be repeated until no more improvements are found or untill a pre-specified number of iterations are completed (100 in this implementation). 
 
@@ -28,11 +28,18 @@ For example, let us take the following route: Amsterdam - Brussels - Paris - Ber
 Old route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam
 New route: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam
 
-Below GIF shows the intuition of this algoritm. The visualisation shows just 1 iteration (i.e. the London-Amsterdam arc), but there could be up to 700000 of these iterations in the current set-up. Hence, the final solution could look drastically different from the initial solution. 
+Below GIF shows the intuition of this algoritm. The visualisation shows just 1 iteration (i.e. the London-Amsterdam arc), but there could be up to 700000 of these iterations in the current set-up. Hence, for small instanced the final solution could look drastically different from the initial solution. 
 ![](NN2OptRep1nCities85.gif)
+The final solution found by NN + 2-Opt is 99.242 KM. Hurray! We improved our tour!
+ 
+## Randomized Nearest Neighbours
+Altough 2-Opt was able to improve our tour, the initial downside of NN extension still exists. We might still be improving  a local optimum solution solution, while never being able to capitalize on the big long term improvement opportunities. To increase our chances of 'stumbling' upon one of those big improvement opportunities, we will need to diversify our initial starting solutions. We need to propose initial solutions that might look 'dumb' initially, but might actually be the building block for something great. This is where the Randomized Nearest Neighbours (RNN, not to be mistaken with Recurrent Neural Network) algoritm comes in play. The only difference with the regular NN algoritm is that it is not completely 'greedy', since at every step in building the route it considers multiple candidates (the 3 shortest distances my implementation) and randomly chooses 1. You can adjust 'greediness' of the algoritm by increasing the number of candidates.
+The final solution when applied to our problem is 194.936 and also the plot looks very messy. But wait! Don't throw your computer out of the window just jet. This might just be bad luck due to the randomness in our algoritm (i.e. stochastic nature). Or it might prove to be an excellent building block for local search! Lets investigate...
+![](RandNNRep1nCities85.gif)
+## 
 
 ## Randomized Nearest Neighbours
-One way to 
+
 
 
 
