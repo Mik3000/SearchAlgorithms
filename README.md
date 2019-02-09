@@ -44,8 +44,8 @@ Next, we apply 2-Opt to the final solution from RNN to see if in fact it is a ge
 Yes!!! 2-Opt took this ugly thing we started out with and has turned it into a beatifull new and improved route! It almost seems like a fairytale... But wait, lets not yet hit the bars to celebrate. What if we could improve our route even further? The random outcome of our RNN has given us a decent building block to work with. But what if there are even better building blocks out there? Due to the stochastic nature of the process every repetition of this process will gives a different outcome, i.e. a different route to start with. What if we repeat this process many times? Maybe we will stumble upon an even better building block!
 
 ## Repeated Randomized Nearest Neighbours with 2-Opt
-This algoritm runs the RNN algoritm many times and applies 2-Opt to each outcome. By repeating this process over and over we are exploring the neigbourhood of many different starting solutions. Doing this we greatly expand out searching area and we have a bigger chance of finding local and global optima. In this implementation I am repeating the process 100 times. ![](RandNN2OptRep1nCities85.gif)
-![](RandNN2OptRep1nCities85.gif)
+This algoritm runs the RNN algoritm many times and applies 2-Opt to each outcome. By repeating this process over and over we are exploring the neigbourhood of many different starting solutions. Doing this we greatly expand out searching area and we have a bigger chance of finding local and global optima. In this implementation I am repeating the process 100 times. 
+![](RandNN2OptRep100nCities85.gif)
 
 
 
