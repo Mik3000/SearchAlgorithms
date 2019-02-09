@@ -21,16 +21,14 @@ This is one of the simplest search heuristics out there. It is part of the famil
 ![](NNRep1nCities85.gif)
 Nearest Neighbour has given us a feasible solution that does not look bad at all for a first try. But can we improve further on it?
 ## Nearest Neighbors with 2-Opt
-2-Opt is an algoritm from the local search family. These algoritms generate a final solution by starting at an initial and  solution and iteratively looking for improvement opportunities in the neighourhood of that solution. This initial solution can be any type of solution as long as it is a feasible one. For example the outcome of a constructive algoritm or a solution build from expert knowledge. The implementation of this 2-opt algoritm works as follows: take 2 arches from the route and reconnect these arches with each other. If this modification has led to a shorter total travel time, the route is modified. During one run of the algoritm, alle possible arches are selected and exchanged. This process can be repeated until no more improvements are found. 
+2-Opt is an algoritm from the local search family. These algoritms generate a final solution by starting at an initial and  solution and iteratively looking for improvement opportunities in the neighourhood of that solution. This initial solution can be any type of solution as long as it is a feasible one. For example the outcome of a constructive algoritm or a solution build from expert knowledge. The implementation of this 2-opt algoritm works as follows: take 2 arcs from the route and reconnect these arcs with each other. If this modification has led to a shorter total travel time, the route is modified. The algoritm continues to build on the improved route. This process can be repeated until no more improvements are found or untill a pre-specified number of iterations are completed (100 in this implementation). 
 
-For example, let us take a single route were we travel using the following route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam. One arch could be Brussel-Paris, another could be Copenhagen-Helsinki. What if we exchange the connections in these arches, i.e. travel from Brussel-Copenhagen and from Paris-Helsinki. The new route fould then looks as follows: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam.
-
-2-Opt calculates the change in total distance for both routes and accepts the changes if distance is decreased. It does it for all possible combination or arches and repeats that process until no more improvements are found or untill a pre-specified number of iterations are completed(100x in this implementation). 
+For example, let us take the following route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam. One arch could be Brussel-Paris, another could be Copenhagen-Helsinki. 2-Opt exchanges the connections in these arches, i.e. the route now runs from Brussel-Copenhagen and from Paris-Helsinki. Next, new travel distance is calculated and compared with the old one. In case of improvement, the new route is accepted and taken as new starting point. 
 
 Old route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam
 New route: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam
 
-Below GIF shows the intuition of this algoritm. The visualisation shows just 1 iteration, but there could be up to 700000 of these iterations in the current set-up. Hence, the final solution could look drastically different from the initial solution. 
+Below GIF shows the intuition of this algoritm. The visualisation shows just 1 iteration (i.e. the London-Amsterdam arc), but there could be up to 700000 of these iterations in the current set-up. Hence, the final solution could look drastically different from the initial solution. 
 ![](NN2OptRep1nCities85.gif)
 
 ## Randomized Nearest Neighbours
