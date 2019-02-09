@@ -67,7 +67,9 @@ Repeated Randomized Nearest Neighbours with 2-Opt | 90.414 KM
 Let me know if you where able to find an even better solution!
 
 Mikko Venhuis
+
 Email: mikkovenhuis@gmail.com
+
 Linkedin: [link] (www.linkedin.com/in/mikkovenhuis)
 
 ### Things I did not have time for but are on my to-do list
