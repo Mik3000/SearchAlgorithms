@@ -58,10 +58,18 @@ Optimization problems can appear to be simple, but in fact are often very comple
 
 Results:
 * Nearest Neighbour: 112.881 KM
-* Nearest Neighbours with 2-Opt: 99242 KM
+* Nearest Neighbours with 2-Opt: 99.242 KM
 * Randomized Nearest Neighbours: 194.936 KM
 * Randomized Nearest Neighbours with 2-Opt: 99.430 KM
 * Repeated Randomized Nearest Neighbours with 2-Opt: 90.414 KM
+
+Algoritm | Solution
+------------ | -------------
+Nearest Neighbour | 112.881 KM
+Nearest Neighbours with 2-Opt | 99.242 KM
+Randomized Nearest Neighbours | 194.936 KM
+Randomized Nearest Neighbours with 2-Opt | 99.430 KM
+Repeated Randomized Nearest Neighbours with 2-Opt | 90.414 KM
 
 Let me know if you where able to find an even better solution!
 
@@ -70,7 +78,7 @@ Email: mikkovenhuis@gmail.com
 Linkedin: [link] (www.linkedin.com/in/mikkovenhuis)
 
 ### Things I did not have time for but are on my to-do list
-* Generate the optimal solution to this problem using the Gurobi
+* Generate the optimal solution to this problem using Gurobi
 * Make regional versions. E.g. visit all capital cities in Europe
 * Apply alternative search heuristics like Genetic Algoritm, Simulated Annealing or Tabu Search
 
