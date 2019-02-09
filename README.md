@@ -10,7 +10,7 @@ The dataset contains all the capital cities around the world with over 1 mln inh
 ![](dataset.png)
 
 ## Approach
-One approach could be to calculate all possible routes and choose the optimal one. For this instance of TSP with 85 cities the number of possible solutions can be calculated as (n-1)!/2 which translates to 1.65712e+126, or 1657120067282643529694317127122958783813299277197483101064623714896696398713440263618419048770174788491009133122012443658158080 routes. It would take many years and a quantum computer to solve the problem using this approach. Since I don't have either at my disposal this approach is not feasible. 
+One approach could be to calculate all possible routes and choose the optimal one. For this instance of TSP with 85 cities the number of possible solutions can be calculated as (n-1)!/2 which translates to 1.65712e+126, or 1657120067282643529694317127122958783813299277197483101064623714896696398713440263618419048770174788491009133122012443658158080 routes. This is more than the number of stars in the universe ([source](https://www.esa.int/Our_Activities/Space_Science/Herschel/How_many_stars_are_there_in_the_Universe)), or the number of grains in the Sahara([source](https://www.youtube.com/watch?v=jQ41Gk80djs)). It would take many years and many quantum computer to solve the problem using this approach. Since I don't have either at my disposal this approach is not feasible. 
 
 Another approach could be to use exact algoritms like branch-and-bound or simplex. These are very robust methods that will find the optimum solution for TSP problems of up to +/-200 (on the average PC). However, visualising these in an intuitive way is challenging, if not impossible. As the main goal of this project is to show intuition of algoritms to people who are fresh on the subject, these are not suitable. Also, these methods do not scale well so applying them to more cities (the dataset contains 40000 in total) is not feasible. Hence, less opportunity to play around with larger sets.
 
@@ -20,7 +20,7 @@ Instead, I will use another powerfull line of attack to this problem: search heu
 Nearest Neighour (NN) is one of the simplest search heuristics out there. It is part of the family of constructive search heuristics, meaning that it gradually builds a route, starting with 1 city and stopping only when all cities have been visited. It is greedy in nature; at each step it chooses the location that is closest to the current location. Applied to our problem it finds a route with a total distance of 112.881 KM. Everytime we run the algoritm, it will generate exactly the same solution. This might seem reassuring, but it is also a big downside of this algoritm. Because of its greedy nature, it will always go for immediate gains and miss out on opportunities that will pay out in a longer term. NN has given us a feasible solution that does not look bad at all for a first try. But can we improve further on it?
 ![](NNRep1nCities85.gif)
 
-## Nearest Neighbors with 2-Opt
+## Nearest Neighbours with 2-Opt
 2-Opt is an algoritm from the local search family. These algoritms generate a final solution by starting at an initial and  solution and iteratively looking for improvement opportunities in the neighourhood of that solution. This initial solution can be any type of solution as long as it is a feasible one. For example the outcome of a constructive algoritm or a solution build from expert knowledge. The implementation of this 2-opt algoritm works as follows: take 2 arcs from the route and reconnect these arcs with each other. If this modification has led to a shorter total travel time, the route is modified. The algoritm continues to build on the improved route. This process can be repeated until no more improvements are found or untill a pre-specified number of iterations are completed (100 in this implementation). 
 
 For example, let us take the following route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam. One arch could be Brussel-Paris, another could be Copenhagen-Helsinki. 2-Opt exchanges the connections in these arches, i.e. the route now runs from Brussel-Copenhagen and from Paris-Helsinki. Next, new travel distance is calculated and compared with the old one. In case of improvement, the new route is accepted and taken as new starting point. 
@@ -55,10 +55,14 @@ Optimization problems can appear to be simple, but in fact are often very comple
 ### Things I did not have time for but are on my to-do list
 - Generate the optimal solution to this problem using the Gurobi
 - Make regional versions. E.g. visit all capital cities in Europe
-- Apply alternate search heuristics, like Genetic Algoritm, Simulated Annealing or Tabu Search
+- Apply alternative search heuristics like Genetic Algoritm, Simulated Annealing or Tabu Search
 
 ### If you would like to know more:
-- Traveling Sales Problem https://en.wikipedia.org/wiki/Travelling_salesman_problem
+- Traveling Sales Problem: [Wiki] (https://en.wikipedia.org/wiki/Travelling_salesman_problem) [University of Waterloo] (http://www.math.uwaterloo.ca/tsp/)
+- 2-Opt [Wiki] (https://en.wikipedia.org/wiki/2-opt)
+- 
+
+([source](http://www.math.uwaterloo.ca/tsp/problem/index.html))
 
 
 
