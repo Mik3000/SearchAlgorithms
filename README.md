@@ -27,8 +27,8 @@ Nearest Neighour (NN) is one of the simplest search heuristics out there. It is 
 
 For example, let us take the following route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam. One arch could be Brussel-Paris, another could be Copenhagen-Helsinki. 2-Opt exchanges the connections in these arches, i.e. the route now runs from Brussel-Copenhagen and from Paris-Helsinki. Next, new travel distance is calculated and compared with the old one. In case of improvement, the new route is accepted and taken as new starting point. 
 
-*Old route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam
-*New route: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam
+* Old route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam
+* New route: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam
 
 Below GIF shows the intuition of this algoritm. The visualisation shows just 1 iteration (i.e. the London-Amsterdam arc), but there could be up to 700.000 of these iterations in the current set-up. Hence, for a small instance the final solution could look drastically different from the initial solution. The final solution found by NN + 2-Opt is 99.242 KM. Hurray! We improved our tour!
 ![](NN2OptRep1nCities85.gif)
@@ -57,11 +57,11 @@ Wow! Applying this combination of algoritms has decreased our current best total
 Optimization problems can appear to be simple, but in fact are often very complex and have a enormous amount of potential solutions. Solving them can be done with exact methods, but those often require time and a lot of computing power. Especially large optimization problems will often be too difficult to deal with, despite all the process we are making in terms of affordable computing power (i.e. Moore' s law). But, applying common sense and some creativity, we can build algoritms that can perform very well. In fact, these solutions can even outperform the exact methods if time is a constraint. I hope this paper helps people unfamiliar with optimization create some intuition in how algoritms can work and get a sense of their massive potential. 
 
 Results:
-*Nearest Neighbour: 112.881 KM
-*Nearest Neighbours with 2-Opt: 99242 KM
-*Randomized Nearest Neighbours: 194.936 KM
-*Randomized Nearest Neighbours with 2-Opt: 99.430 KM
-*Repeated Randomized Nearest Neighbours with 2-Opt: 90.414 KM
+* Nearest Neighbour: 112.881 KM
+* Nearest Neighbours with 2-Opt: 99242 KM
+* Randomized Nearest Neighbours: 194.936 KM
+* Randomized Nearest Neighbours with 2-Opt: 99.430 KM
+* Repeated Randomized Nearest Neighbours with 2-Opt: 90.414 KM
 
 Let me know if you where able to find an even better solution!
 
@@ -70,14 +70,14 @@ Email: mikkovenhuis@gmail.com
 Linkedin: [link] (www.linkedin.com/in/mikkovenhuis)
 
 ### Things I did not have time for but are on my to-do list
-*Generate the optimal solution to this problem using the Gurobi
-*Make regional versions. E.g. visit all capital cities in Europe
-*Apply alternative search heuristics like Genetic Algoritm, Simulated Annealing or Tabu Search
+* Generate the optimal solution to this problem using the Gurobi
+* Make regional versions. E.g. visit all capital cities in Europe
+* Apply alternative search heuristics like Genetic Algoritm, Simulated Annealing or Tabu Search
 
 ### If you would like to know more:
-*Traveling Sales Problem: [Wiki] (https://en.wikipedia.org/wiki/Travelling_salesman_problem) [University of Waterloo] (http://www.math.uwaterloo.ca/tsp/)
-*2-Opt [Wiki] (https://en.wikipedia.org/wiki/2-opt)
-*Nearest Neighbour [Wiki] (https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
+* Traveling Sales Problem: [Wiki] (https://en.wikipedia.org/wiki/Travelling_salesman_problem) [University of Waterloo] (http://www.math.uwaterloo.ca/tsp/)
+* 2-Opt [Wiki] (https://en.wikipedia.org/wiki/2-opt)
+* Nearest Neighbour [Wiki] (https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
 
 
 
