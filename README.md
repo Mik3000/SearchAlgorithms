@@ -79,5 +79,5 @@ Email: mikkovenhuis@gmail.com
 
 ### If you would like to know more:
 * Traveling Sales Problem: [wiki](https://en.wikipedia.org/wiki/Travelling_salesman_problem) or [University of Waterloo](http://www.math.uwaterloo.ca/tsp/)
-* 2-Opt [wiki](https://en.wikipedia.org/wiki/2-opt)
-* Nearest Neighbour [wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
+* 2-Opt: [wiki](https://en.wikipedia.org/wiki/2-opt)
+* Nearest Neighbours: [wiki](https://en.wikipedia.org/wiki/Nearest_neighbour_algorithm)
