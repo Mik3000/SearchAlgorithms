@@ -45,7 +45,7 @@ Next, we apply 2-Opt to the final solution from RNN to see if in fact it is a ge
 ![](images/RandNN2OptRep1nCities85.gif)
 Yes!!! 2-Opt took this ugly thing we started out with and turned it into a beautiful new route of just 99.430 KM. It almost seems like a fairytale... But wait, lets not yet hit the bars to celebrate. The route is slightly longer then the route from NN + 2Opt so we have some more work to do.
 
-The random outcome of our RNN has given us a decent building block to work with. But what if there are even better building blocks out there? Due to the stochastic nature every repetition of this process gives a different outcome, i.e. a different route to start with. What if we repeat this process many times? Maybe we will stumble upon an even better building block!
+The random outcome of our RNN has given us a decent building block to work with. But what if there are even better building blocks out there? Due to the stochastic nature every repetition of this process produces a different outcome, i.e. a different route to start with. What if we repeat this process many times? Maybe we will stumble upon an even better building block!
 
 ## Repeated Randomized Nearest Neighbours with 2-Opt
 This algoritm runs the RNN algoritm many times and applies 2-Opt to each outcome. By repeating this process over and over we are exploring the neigbourhood of many different starting solutions. Doing this we greatly expand out searching area and we have a bigger chance of finding local and global optima. In my implementation I am repeating the process 100 times to ensure the GIF does not become too large.
