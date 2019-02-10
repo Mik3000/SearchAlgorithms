@@ -53,6 +53,9 @@ This algoritm runs the RNN algoritm many times and applies 2-Opt to each outcome
 
 Wow! Applying this combination of algoritms has decreased our curre nt best total travel distance by a whopping 10%! Total travel distance is now 90.414 KM. Now its really time to celebrate. This algoritm has been able to find 8 improvements on our previous best route. By introducing variance in the explored intial solutions we where able to explore a lot of different solutions and improve on them iteratively. Doing this we where able to cover a lot of ground, and also explore initial solutions that looked less promising at start. The algoritm went from something very static, without inspiration and creativity to something that is able to learn and improve by itself.
 
+![](plot100reps.png)
+The last improvement has been found in the 95th iteration, so it might be worthwhile to extend the number of iterations in a next run. 
+
 ## Conclusion
 Optimization problems can appear to be simple, but in fact are often very complex and have a enormous amount of potential solutions. Solving them can be done with exact methods, but those often require time and a lot of computing power. Especially large optimization problems will often be too difficult to deal with, despite all the process we are making in terms of affordable computing power (i.e. Moore' s law). But, applying common sense and some creativity, we can build algoritms that can perform very well. In fact, these solutions can even outperform the exact methods if time is a constraint. I hope this paper helps people unfamiliar with optimization create some intuition in how algoritms can work and get a sense of their massive potential. 
 
