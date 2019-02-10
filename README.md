@@ -32,7 +32,7 @@ For example, let us take the following route: Amsterdam - Brussels - Paris - Ber
 * Modified route: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam
 
 ![](images/NN2OptRep1nCities85.gif)
-For convenience, this visualisation shows just 1 iteration (i.e. the London-Amsterdam arc), but there could be up to 700.000 of these iterations in my implementation. Hence, for a small instance the final solution could look quite different from the initial solution. The final solution found by NN + 2-Opt is 99.242 KM. Hurray! We improved our tour!
+For convenience, this visualisation shows just one iteration (i.e. the London-Amsterdam arc), but there could be up to 700.000 of these iterations in my implementation. Hence, for a small instance the final solution could look quite different from the initial solution. The final solution found by NN + 2-Opt is 99.242 KM. Hurray! We improved our tour!
 ## Randomized Nearest Neighbours
 Altough 2-Opt was able to improve our tour, the initial downside of NN extension still exists. We might still be improving  a local optimum solution, while never being able to capitalize on the big long term improvement opportunities. To increase our chances of 'stumbling' upon one of those big improvement opportunities, we will need to diversify our initial starting solutions. This means that we might propose initial solutions that might look 'dumb' initially, but actually are the building block for something great. 
 
