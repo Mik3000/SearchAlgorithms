@@ -1,8 +1,7 @@
 # Around the world in 90.414 kilometers
 ![](images/front.jpg)
 ## The shortest route to visit all capital cities with over 1 mln inhabitants
-Hi there! This paper compares several search heuristics applied to a Traveling Salesman Problem with 85 cities. The 
-goal is to show intuition behind some well known and effective search heuristics to people new to the subject of optimization. I have chosen some of the lesser complex heuristics and attempted to describe the algoritms as functionally as possible. If you are interested you can run the algoritms yourself using the supplied R code or create your own adaptation. 
+Hi there! This paper compares several search algoritms applied to a single problem: How to travel to 85 cities around the world? The goal is to show intuition behind some well known and effective search algoritms to people new to the subject of optimization. I have chosen some of the less complex heuristics and attempted to describe them as functionally as possible. If you are interested you can run the algoritms yourself using the supplied R code or create your own adaptation. 
 
 ## Traveling Salesman Problem
 Given a collection of cities and the cost of travel between each pair of them, the traveling salesman problem (TSP) is to find the cheapest way of visiting all of the cities and returning to the starting point. The simplicity of the statement of the problem is deceptive the TSP is one of the most intensely studied problems in computational mathematics ([source](http://www.math.uwaterloo.ca/tsp/problem/index.html)). For this project 'cost' is defined as the direct (i.e Euclidian) distance in KM between two cities.
