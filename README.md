@@ -1,6 +1,5 @@
 # Around the world in 90.414 kilometers
 ![](images/front.jpg)
-![](images/front.jpg)
 ## The shortest route to visit all capital cities with over 1 mln inhabitants
 Hi there! This paper compares several search heuristics applied to a Traveling Salesman Problem with 85 cities. The 
 goal is to show intuition behind some well known and effective search heuristics to people new to the subject of optimization. I have chosen some of the lesser complex heuristics and attempted to describe the algoritms as functionally as possible. If you are interested you can run the algoritms yourself using the supplied R code or create your own adaptation. 
