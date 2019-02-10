@@ -8,7 +8,7 @@ Given a collection of cities and the cost of travel between each pair of them, t
 
 ## Dataset
 The reduced dataset contains all the capital cities around the world with over 1 mln inhabitants as per 2006. Nowawadays, there might me more capital cities with over 1 mln people, but that is not relevant to the optimization problem itself. I made an exception for the capitals of the US (Washington), Canada (Ottawa) and the Netherlands (Amsterdam). They did not have more than 1 mln inhabitants in 2006, but I added them anyway just for fun. The set contains data on a total of 85 cities. The dataset is build from a source file that is freely available in the 'maps' package in R and has information on over 40.000 cities. Of course, we start all our routes in Amsterdam.
-![](dataset.png)
+![](images/dataset.png)
 
 ## Approach
 One approach could be to calculate all possible routes and choose the optimal one. For this instance of TSP with 85 cities the number of possible solutions can be calculated as (n-1)!/2 which translates to 1.65712e+126, or 1657120067282643529694317127122958783813299277197483101064623714896696398713440263618419048770174788491009133122012443658158080 routes. This is more than the number of stars in the universe ([source](https://www.esa.int/Our_Activities/Space_Science/Herschel/How_many_stars_are_there_in_the_Universe)), or the number of grains of sand in the Sahara ([source](https://www.youtube.com/watch?v=jQ41Gk80djs)). It would take many years and a quantum computers to solve the problem using this approach. Since I don't have either at my disposal this approach is not feasible. 
