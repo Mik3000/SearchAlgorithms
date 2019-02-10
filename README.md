@@ -29,7 +29,7 @@ The 2-opt algoritm works as follows: take 2 arcs from the route, reconnect these
 For example, let us take the following route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam. One arch could be Brussel-Paris, another could be Copenhagen-Helsinki. 2-Opt exchanges the connections in these arches, i.e. the route now runs from Brussel-Copenhagen and from Paris-Helsinki. . 
 
 * Current route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam
-* Modified route route: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam
+* Modified route: Amsterdam - Brussels - Copenhagen - Berlin - Paris - Helsinki - London - Amsterdam
 
 ![](images/NN2OptRep1nCities85.gif)
 For convenience, this visualisation shows just 1 iteration (i.e. the London-Amsterdam arc), but there could be up to 700.000 of these iterations in my implementation. Hence, for a small instance the final solution could look quite different from the initial solution. The final solution found by NN + 2-Opt is 99.242 KM. Hurray! We improved our tour!
