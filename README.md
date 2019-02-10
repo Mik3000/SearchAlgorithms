@@ -53,7 +53,7 @@ This algoritm runs the RNN algoritm many times and applies 2-Opt to each outcome
 
 Wow! Applying this combination of algoritms has decreased our curre nt best total travel distance by a whopping 10%! Total travel distance is now 90.414 KM. Now its really time to celebrate. This algoritm has been able to find 8 improvements on our previous best route. By introducing variance in the explored intial solutions we where able to explore a lot of different solutions and improve on them iteratively. Doing this we where able to cover a lot of ground, and also explore initial solutions that looked less promising at start. The algoritm went from something very static, without inspiration and creativity to something that is able to learn and improve by itself.
 
-![](plot100reps.png)
+![](plotnRep100.png)
 The last improvement has been found in the 95th iteration, so it might be worthwhile to extend the number of iterations in a next run. 
 
 ## Conclusion
