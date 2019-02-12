@@ -24,7 +24,7 @@ Applied to our problem we find a route with a total distance of 112.881 KM. Ever
 ## Nearest Neighbours with 2-Opt
 2-Opt is an algorithm from the local search family. These algorithms start at an initial solution and iteratively look for improvement opportunities in the neighourhood of that solution. This initial solution can be any type of solution as long as it is a feasible one. For example the outcome of a constructive algorithm like NN or a solution build from expert knowledge. 
 
-The 2-opt algorithm works as follows: take 2 arcs from the route, reconnect these arcs with each other and calculate new travel distance. If this modification has led to a shorter total travel distance than the current route, the current route is updated. The algorithm continues to build on the improved route and repeats the steps. This process will be repeated until no more improvements are found or until a pre-specified number of iterations are completed (100 in this implementation). 
+The 2-opt algorithm works as follows: take 2 arcs from the route, reconnect these arcs with each other and calculate new travel distance. If this modification has led to a shorter total travel distance the current route is updated. The algorithm continues to build on the improved route and repeats the steps. This process will be repeated until no more improvements are found or until a pre-specified number of iterations are completed (100 in this implementation). 
 
 For example, let us take the following route: Amsterdam - Brussels - Paris - Berlin - Copenhagen - Helsinki - London - Amsterdam. One arch could be Brussel-Paris, another could be Copenhagen-Helsinki. 2-Opt exchanges the connections in these arches, i.e. the route now runs from Brussel-Copenhagen and from Paris-Helsinki.
 
