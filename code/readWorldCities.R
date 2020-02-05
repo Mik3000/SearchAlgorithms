@@ -6,6 +6,7 @@ library(rworldmap)
 cities = world.cities
 cities = cities[cities$capital == 1, ]
 cities = cities[cities$pop>1000000 | cities$name %in% c("Washington", "Ottawa", "Amsterdam"), ]
+#cities = head(cities, 20)
 
 # start in Amsterdam
 cities = rbind(cities[cities$name == "Amsterdam", ], cities[cities$name != "Amsterdam", ])
@@ -23,6 +24,6 @@ y = cities$lat
 remove(cities)
 
 # Create gif and remove separate .png from working directory
-newmap = getMap(resolution = "low")
+newmap = getMap()
 plot(newmap, main = paste0("Number of cities: ", nCities, "\n", "Start: ", cityNames[1]), cex.main = 1.5)
 points(x, y, col = "red", cex = .9, pch = 20)
